@@ -30,7 +30,7 @@ function sendMsg(from, text) {
 
 function registration() {
     let userName = document.getElementById("userName").value;
-    $.get(url + "/registration/" + userName, function (response) {
+    $.get(url + "/register/" + userName, function (response) {
         connectToChat(userName);
     }).fail(function (error) {
         if (error.status === 400) {
